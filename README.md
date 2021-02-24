@@ -1,7 +1,10 @@
 # dcreport-script
 FiveM Discord Loglu Report Scripti
+
 https://discord.gg/JPCwcpH4ye
+
 Sandra Holigan
+
 F Ξ T H I Y Ξ L I#1844
 
 
@@ -13,6 +16,8 @@ Kurulum:
 2- 4. satıra report geldiğinde hangi role etiket gidicekse o rolün idsini girin
 
 ve server.cfg'ye **start dcreport-script-main** yazın.
+
+Fotoğraf: https://hizliresim.com/4a54G6
 
 
 
