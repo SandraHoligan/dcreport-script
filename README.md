@@ -12,5 +12,7 @@ Kurulum:
 
 2- 4. satıra report geldiğinde hangi role etiket gidicekse o rolün idsini girin
 
+ve server.cfg'ye **start dcreport-script-main** yazın.
+
 
 
