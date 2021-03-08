@@ -1,8 +1,8 @@
-webHookURL = "https://discord.com/api/webhooks/811998317705429023/HdZh1a6BaTZ_kMwHd6Y7GAbyb_YTZw13kQtUx7V_2VLg3KcatFZO4gugq93mdxvHA81W" -- Discordunuzda weebhook oluşturup buraya ekleyin
-local DISCORD_NAME = "Rapor Botu" -- Değiştirmenize gerek yok 
-local DISCORD_IMAGE = "https://newsfeed.org/wp-content/uploads/social-media-reports-Facebook-reports-Instagram-reports.jpg" -- Resimi değiştirebilirsiniz.
-local role = "809466474761814053" -- reportun discordda etiketleyeceği rol idsi
-enableReport = true -- dokunmayın
+webHookURL = "https://discord.com/api/webhooks/811998317705429023/HdZh1a6BaTZ_kMwHd6Y7GAbyb_YTZw13kQtUx7V_2VLg3KcatFZO4gugq93mdxvHA81W" -- Discord Webhook you can create it in Channel settings
+local DISCORD_NAME = "Report System" -- Webhook Name
+local DISCORD_IMAGE = "https://newsfeed.org/wp-content/uploads/social-media-reports-Facebook-reports-Instagram-reports.jpg" -- Webhook Image
+local role = "809466474761814053" -- Team Role ID
+enableReport = true -- true or false :)
 
 local role = "<@&"..role..">"
 
@@ -13,10 +13,10 @@ if enableReport then
         local username = GetPlayerName(source)
 		local reporter = GetPlayerName(source)
 		if username == nil then
-			print("ID'yi Doğru Girdiğinizden Emin Olun")
+			print("PLS write a Username or a User ID")
 		else
 			color = 16711680
-			print("Kullanıcı".. username .. " Yetkiliye Şikayet Edildi!")
+			print("You sucessfully reported".. username .. "!")
             
             local ping = GetPlayerPing(source)
             local identifiers = GetPlayerIdentifiers(source)
@@ -25,10 +25,11 @@ if enableReport then
             local connect = {
                 {
                     ["color"] = color,
-                    ["title"] = "Kullanıcı ["..source.."] ".. username .. " Şu Sebebten Şikayet Edildi: ",
-                    ["description"] = "Sebep: **"..msg.."**\nPing: **"..ping.."**\nKimlik: **"..data.."**",
+                    ["title"] = "["..source.."] ".. username .. " reported for the following reason: ",
+                    ["description"] = "Reason: **"..msg.."**\nPing: **"..ping.."**\nID: **"..data.."**",
+		    ["author"] = "by SandraHoligan",
                     ["footer"] = {
-                    ["text"] = "Rapor : "..reporter.. ".",
+                    ["text"] = "Reported by : "..reporter.. ".",
                     },
                 }
             }
