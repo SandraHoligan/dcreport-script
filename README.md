@@ -1,7 +1,7 @@
 # dcreport-script
 FiveM Discord Loglu Report Scripti
 
-https://discord.gg/JPCwcpH4ye
+https://discord.gg/6mDduX4
 
 Sandra Holigan
 
